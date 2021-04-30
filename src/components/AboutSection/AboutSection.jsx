@@ -5,17 +5,17 @@ import about1 from "../../images/about1.jpg";
 const AboutSection = () => {
   return (
     <div className={styles.AboutSection}>
-      <div className="description">
+      <div className={styles.description}>
         <div className="title">
-          <div className="hide">
+          <div className={styles.hide}>
             <h2>We work to make</h2>
           </div>
-          <div className="hide">
+          <div className={styles.hide}>
             <h2>
               your <span>dreams</span> come
             </h2>
           </div>
-          <div className="hide">
+          <div className={styles.hide}>
             <h2>true.</h2>
           </div>
         </div>
@@ -25,7 +25,7 @@ const AboutSection = () => {
         </p>
         <button>Contact Us</button>
       </div>
-      <div className="image">
+      <div className={styles.image}>
         <img src={about1} alt="photographer" />
       </div>
     </div>

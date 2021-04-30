@@ -9,40 +9,34 @@ import about2 from "../../images/about2.jpg";
 const ServicesSection = () => {
   return (
     <div className={styles.ServicesSection}>
-      <div className="description">
+      <div className={styles.description}>
         <h2>
           High <span>quality</span> services.
         </h2>
-        <div className="cards">
-          <div className="card">
-            <div className="icon">
+        <div className={styles.cards}>
+          <div className={styles.card}>
+            <div className={styles.icon}>
               <img src={clock} alt="clock" />
               <h3>Efficient</h3>
             </div>
             <p>Lorem ipsum dolor sit amet.</p>
           </div>
-        </div>
-        <div className="cards">
-          <div className="card">
-            <div className="icon">
+          <div className={styles.card}>
+            <div className={styles.icon}>
               <img src={teamwork} alt="teamwork" />
               <h3>Teamwork</h3>
             </div>
             <p>Lorem ipsum dolor sit amet.</p>
           </div>
-        </div>
-        <div className="cards">
-          <div className="card">
-            <div className="icon">
+          <div className={styles.card}>
+            <div className={styles.icon}>
               <img src={diaphragm} alt="diaphragm" />
               <h3>Pro Grade Gear</h3>
             </div>
             <p>Lorem ipsum dolor sit amet.</p>
           </div>
-        </div>
-        <div className="cards">
-          <div className="card">
-            <div className="icon">
+          <div className={styles.card}>
+            <div className={styles.icon}>
               <img src={money} alt="money" />
               <h3>Affordable</h3>
             </div>
@@ -50,7 +44,7 @@ const ServicesSection = () => {
           </div>
         </div>
       </div>
-      <div className="image">
+      <div className={styles.image}>
         <img src={about2} alt="camera" />
       </div>
     </div>

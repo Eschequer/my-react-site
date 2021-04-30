@@ -1,0 +1,32 @@
+.Nav {
+  max-height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding: 3rem 10rem;
+  background-color: #282828;
+
+
+    .logo {
+      font-size: 2rem;
+      font-family: "Lobster", cursive;
+      font-weight: lighter;
+    }
+
+  ul {
+    list-style: none;
+    display: flex;
+
+    li {
+      padding-left: 10rem;
+      position: relative;
+    }
+  }
+
+  a {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: white;
+  }
+}
