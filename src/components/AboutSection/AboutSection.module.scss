@@ -15,11 +15,13 @@
   h2 {
     font-weight: lighter;
   }
+
+  .hide {
+    overflow: hidden;
+  }
 }
 
-.hide {
-  overflow: hidden;
-}
+
 
 .image {
   width: 40%;
