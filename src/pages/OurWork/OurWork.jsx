@@ -1,7 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { pageAnimation } from "../../animation";
+import {
+  pageAnimation,
+  fade,
+  lineAnim,
+  photoAnim,
+  slider,
+  sliderContainer,
+  movieContainer,
+} from "../../animation";
 import styles from "./OurWork.module.scss";
 import nature from "../../images/nature.jpg";
 import food from "../../images/food.jpg";
@@ -17,13 +25,21 @@ const OurWork = () => {
       exit="exit"
       style={{ background: "white" }}
     >
-      <div className={styles.movie}>
-        <h2>Nature</h2>
-        <div className={styles.line} />
+      <motion.div variants={sliderContainer}>
+        <motion.div className={styles.frame} variants={slider} />
+        <motion.div className={styles.frame2} variants={slider} />
+        <motion.div className={styles.frame3} variants={slider} />
+        <motion.div className={styles.frame4} variants={slider} />
+      </motion.div>
+      <motion.div className={styles.movie} variants={movieContainer}>
+        <motion.h2 variants={fade}>Nature</motion.h2>
+        <motion.div variants={lineAnim} className={styles.line} />
         <Link to="/work/nature">
-          <img src={nature} alt="nature" />
+          <div style={{ overflow: "hidden" }}>
+            <motion.img variants={photoAnim} src={nature} alt="nature" />
+          </div>
         </Link>
-      </div>
+      </motion.div>
       <div className={styles.movie}>
         <h2>People</h2>
         <div className={styles.line} />

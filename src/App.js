@@ -17,7 +17,7 @@ function App() {
     <div className={styles.App}>
       <Nav />
       <AnimatePresence exitBeforeEnter>
-        <Switch key={location.key} location={location}>
+        <Switch key={location.pathname} location={location}>
           <Route exact path="/">
             <AboutUs />
           </Route>

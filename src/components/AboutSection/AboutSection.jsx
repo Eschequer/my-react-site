@@ -2,24 +2,22 @@ import React from "react";
 import { motion } from "framer-motion";
 import styles from "./AboutSection.module.scss";
 import about1 from "../../images/about1.jpg";
+import { titleAnim, fade, photoAnim } from "../../animation";
+import Wave from "../Wave/Wave";
 
 const AboutSection = () => {
   const container = {
-    hidden: { x: 100 },
+    hidden: { x: 50 },
     show: {
       x: 0,
       transition: {
-        duration: 0.5,
-        ease: "easeOut",
-        staggerChildren: 1,
+        duration: 0.7,
+        ease: "backIn",
+        staggerChildren: 0.2,
         when: "afterChildren",
+        type: "tween",
       },
     },
-  };
-
-  const titleAnim = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { duration: 1 } },
   };
 
   return (
@@ -41,15 +39,16 @@ const AboutSection = () => {
             true.
           </motion.h2>
         </motion.div>
-        <p>
+        <motion.p variants={fade}>
           Contact us for any photography or videography ideas that you have. We
           have professionals with amazing skills to help you achieve it.
-        </p>
-        <button>Contact Us</button>
+        </motion.p>
+        <motion.button variants={fade}>Contact Us</motion.button>
       </div>
       <div className={styles.image}>
-        <img src={about1} alt="photographer" />
+        <motion.img src={about1} alt="photographer" variants={photoAnim} />
       </div>
+      <Wave />
     </div>
   );
 };
