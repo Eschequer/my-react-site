@@ -1,14 +1,26 @@
 import React from "react";
+import { motion } from "framer-motion";
 import styles from "./ServicesSection.module.scss";
 import clock from "../../images/clock.svg";
 import teamwork from "../../images/teamwork.svg";
 import money from "../../images/money.svg";
 import diaphragm from "../../images/diaphragm.svg";
 import about2 from "../../images/about2.jpg";
+import { useAnimScroll } from "../../useAnimScroll";
+import { scrollAnim } from "../../animation";
 
 const ServicesSection = () => {
+  const [ref, controls] = useAnimScroll(0.5);
+
   return (
-    <div className={styles.ServicesSection}>
+    <motion.div
+      className={styles.ServicesSection}
+      ref={ref}
+      variants={scrollAnim}
+      transition={{ duration: 0.75, ease: "easeInOut" }}
+      animate={controls}
+      initial="hidden"
+    >
       <div className={styles.description}>
         <h2>
           High <span>quality</span> services.
@@ -47,7 +59,7 @@ const ServicesSection = () => {
       <div className={styles.image}>
         <img src={about2} alt="camera" />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

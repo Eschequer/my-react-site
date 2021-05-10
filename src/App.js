@@ -11,7 +11,6 @@ import WorkDetail from "./pages/WorkDetail/WorkDetail";
 
 function App() {
   const location = useLocation();
-  console.log(location);
 
   return (
     <div className={styles.App}>

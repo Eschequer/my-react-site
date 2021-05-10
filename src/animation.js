@@ -7,6 +7,7 @@ export const pageAnimation = {
     opacity: 1,
     y: 0,
     transition: {
+      staggerChildren: 0.25,
       duration: 1,
       when: "beforeChildren",
     },
@@ -21,10 +22,10 @@ export const pageAnimation = {
 };
 
 export const titleAnim = {
-  hidden: { y: 150 },
+  hidden: { y: 200 },
   show: {
     y: 0,
-    transition: { type: "tween", ease: "easeOut", duration: 0.5 },
+    transition: { type: "tween", ease: "easeInOut", duration: 0.9 },
   },
 };
 
@@ -32,7 +33,7 @@ export const fade = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    transition: { type: "tween", ease: "easeOut", duration: 0.5, delay: 0.5 },
+    transition: { ease: "easeOut", duration: 0.5, delay: 0.5 },
   },
 };
 
@@ -77,7 +78,7 @@ export const sliderContainer = {
 export const slider = {
   hidden: { x: "-200%", skew: "75deg" },
   show: {
-    x: "100%",
+    x: "120%",
     skew: "0deg",
     transition: { ease: "easeOut", duration: 1 },
   },
@@ -96,5 +97,13 @@ export const movieContainer = {
       delay: 0.2,
       when: "beforeChildren",
     },
+  },
+};
+
+export const scrollAnim = {
+  hidden: { opacity: 0, scale: 0.9 },
+  show: {
+    opacity: 1,
+    scale: 1,
   },
 };

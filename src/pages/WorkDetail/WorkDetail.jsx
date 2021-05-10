@@ -6,6 +6,7 @@ import { pageAnimation } from "../../animation";
 import { picturesState } from "../../picturesState";
 import styles from "./WorkDetail.module.scss";
 import Title from "../../components/Title/Title";
+import ScrollTop from "../../components/ScrollTop";
 
 const WorkDetail = () => {
   const history = useHistory();
@@ -49,6 +50,7 @@ const WorkDetail = () => {
         alt={picture.title}
         className={styles.secondaryImg}
       />
+      <ScrollTop />
     </motion.div>
   ) : null;
 };

@@ -1,3 +1,38 @@
 .Page {
-min-height: 100vh;
+  padding: 5rem 10rem;
+  color: #353535;
+  min-height: 90vh;
+  margin-top: 10vh;
+
+  .title {
+    margin-bottom: 4rem;
+    overflow: hidden;
+
+    h2 {
+      font-size: 5rem;
+    }
+  }
+
+  .hide {
+    overflow: hidden;
+
+    .contact {
+      display: flex;
+      align-items: center;
+
+      .circle {
+        width: 5rem;
+        height: 5rem;
+        background: #353535;
+        border-radius: 50%;
+      }
+
+      h2 {
+        margin: 2rem;
+      }
+    }
+
+
+
+  }
 }
