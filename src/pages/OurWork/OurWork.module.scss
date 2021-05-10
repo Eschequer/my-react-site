@@ -3,6 +3,9 @@
   overflow: hidden;
   padding: 5rem 10rem;
   margin-top: 10vh;
+  @media (max-width: 1500px) {
+    padding: 15vh 2rem 2rem;
+  }
 
   .frame {
     position: fixed;

@@ -10,7 +10,7 @@ import { useAnimScroll } from "../../useAnimScroll";
 import { scrollAnim } from "../../animation";
 
 const ServicesSection = () => {
-  const [ref, controls] = useAnimScroll(0.5);
+  const [ref, controls] = useAnimScroll(0.3);
 
   return (
     <motion.div
